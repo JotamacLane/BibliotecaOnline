@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Biblioteca Fácil</title>
-<link rel="stylesheet" href="../assets/styles/biblioteca.css">
+<link rel="stylesheet" href="../frontend/assets/styles/biblioteca.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
@@ -134,21 +134,22 @@
 
   <footer></footer>
   <!-- Cadeira Aplicado em nuvem -->
+<script src="node_modules/parse/dist/parse.min.js"></script>
 <script>
-  const Parse = require('parse/node');
+  
+
+  const Parse = require('parse');
 
 Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
 // Remember to inform BOTH the Back4App Application ID AND the JavaScript KEY
 Parse.initialize(
   'rI7MzjMSkgalJx8Me3HsfkwVuqXLH4VnNFKGgXmT', // This is your Application ID
-  'mVaYJbkTiKvdpjgaFHrkBl4F7p3xd6HFTDIphygm', // This is your Javascript key
-  'sX9nWZBlpgaanR8t7x76AtgnKqwiTJWumvSfg5Mf' // This is your Master key (never use it in the frontend)
+  'mVaYJbkTiKvdpjgaFHrkBl4F7p3xd6HFTDIphygm' // This is your Javascript key
 );
 </script>
 
-<script>
 
-  
+<script>
   (async () => {
   const query = new Parse.Query('MyCustomClassName');
   // You can also query by using a parameter of an object
